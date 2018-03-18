@@ -1,0 +1,8 @@
+{
+  "name": "pndu",
+  "app_id": "6c2dea2d",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
