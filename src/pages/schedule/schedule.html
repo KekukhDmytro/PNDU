@@ -6,10 +6,10 @@
 
     <ion-segment [(ngModel)]="segment" (ionChange)="updateSchedule()">
       <ion-segment-button value="all">
-        All
+       Всі
       </ion-segment-button>
       <ion-segment-button value="favorites">
-        Favorites
+       Обрані
       </ion-segment-button>
     </ion-segment>
 
@@ -57,10 +57,10 @@
 
         <ion-item-options>
           <button ion-button color="favorite" (click)="addFavorite(slidingItem, session)" *ngIf="segment === 'all'">
-            Favorite
+            Обрати
           </button>
           <button ion-button color="danger" (click)="removeFavorite(slidingItem, session, 'Remove Favorite')" *ngIf="segment === 'favorites'">
-            Remove
+           Видалити
           </button>
         </ion-item-options>
 
@@ -71,7 +71,7 @@
   </ion-list>
 
   <ion-list-header [hidden]="shownSessions > 0">
-      No Sessions Found
+      Не знайдені дані
   </ion-list-header>
 
   <ion-fab bottom right #fab>

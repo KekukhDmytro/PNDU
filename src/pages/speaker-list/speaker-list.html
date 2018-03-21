@@ -3,7 +3,7 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Speakers</ion-title>
+    <ion-title>Помічники</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -18,7 +18,7 @@
             <ion-card-header>
               <button ion-item detail-none (click)="goToSpeakerDetail(speaker)">
                 <ion-avatar item-start>
-                  <img [src]="speaker.profilePic" alt="Speaker profile pic">
+                  <img [src]="speaker.profilePic" alt="profile pic">
                 </ion-avatar>
                 {{speaker.name}}
               </button>
@@ -31,7 +31,7 @@
                 </button>
 
                 <button ion-item (click)="goToSpeakerDetail(speaker)">
-                  <h3>About {{speaker.name}}</h3>
+                  <h3>Про {{speaker.name}}</h3>
                 </button>
               </ion-list>
             </ion-card-content>
@@ -40,19 +40,19 @@
               <ion-col col-12 col-lg-auto text-center text-lg-left>
                 <button ion-button clear small color="primary" icon-start (click)="goToSpeakerTwitter(speaker)">
                   <ion-icon name="logo-twitter"></ion-icon>
-                  Tweet
+                  Твіт
                 </button>
               </ion-col>
               <ion-col col-12 col-lg-auto text-center>
                 <button ion-button clear small color="primary" icon-start (click)="openSpeakerShare(speaker)">
                   <ion-icon name='share-alt'></ion-icon>
-                  Share
+                   Поділитись
                 </button>
               </ion-col>
               <ion-col col-12 col-lg-auto text-center text-lg-right>
                 <button ion-button clear small color="primary" icon-start (click)="openContact(speaker)">
                   <ion-icon name='chatboxes'></ion-icon>
-                  Contact
+                   Контакти
                 </button>
               </ion-col>
             </ion-row>

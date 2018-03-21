@@ -4,7 +4,7 @@
 		<button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-		<ion-title>Support</ion-title>
+		<ion-title>Підтримка</ion-title>
 	</ion-navbar>
 
 </ion-header>
@@ -18,17 +18,17 @@
 	<form #submitForm="ngForm" novalidate (ngSubmit)="submit(submitForm)">
 		<ion-list no-lines>
 			<ion-item>
-				<ion-label stacked color="primary">Enter your support message below</ion-label>
+				<ion-label stacked color="primary">Вкажіть ваші зауваження та побажання:</ion-label>
 				<ion-textarea [(ngModel)]="supportMessage" name="supportQuestion" #supportQuestion="ngModel" rows="6" required></ion-textarea>
 			</ion-item>
 		</ion-list>
 
 		<p ion-text [hidden]="supportQuestion.valid || submitted === false" color="danger" padding-left>
-			Support message is required
+		Введіть запит на підтримку
 		</p>
 
 		<div padding>
-			<button ion-button block type="submit">Submit</button>
+			<button ion-button block type="submit">Надіслати</button>
 		</div>
 	</form>
 </ion-content>
