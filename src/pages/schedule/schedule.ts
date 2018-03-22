@@ -139,7 +139,7 @@ export class SchedulePage {
 
   openSocial(network: string, fab: FabContainer) {
     let loading = this.loadingCtrl.create({
-      content: `Posting to ${network}`,
+      content: `Відкриваємо ${network}`,
       duration: (Math.random() * 1000) + 500
     });
     loading.onWillDismiss(() => {
@@ -166,4 +166,7 @@ export class SchedulePage {
       }, 1000);
     });
   }
+  close1(url: string) {
+    window.open(url, '_blank');
+}
 }
