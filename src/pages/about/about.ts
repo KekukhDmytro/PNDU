@@ -16,5 +16,7 @@ export class AboutPage {
     let popover = this.popoverCtrl.create(PopoverPage);
     popover.present({ ev: event });
   }
-
+  close2(url: string) {
+    window.open(url, '_blank');
+  }
 }
