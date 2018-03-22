@@ -48,7 +48,7 @@ export class ConferenceApp {
     { title: 'Карта', name: 'TabsPage', component: TabsPage, tabComponent: MapPage, index: 2, icon: 'map' }
   ];
   loggedInPages: PageInterface[] = [
-    { title: 'Профіль', name: 'AccountPage', component: AccountPage, icon: 'person' },
+    { title: 'Профіль', name: 'AccountPage', component: AccountPage, icon: 'contact' },
     { title: 'Підтримка', name: 'SupportPage', component: SupportPage, icon: 'help' },
     { title: 'Вихід', name: 'TabsPage', component: TabsPage, icon: 'log-out', logsOut: true }
   ];

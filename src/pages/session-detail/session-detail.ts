@@ -1,7 +1,14 @@
+import { SessionDetailPage } from '../session-detail/session-detail';
+
+
+
+
+
 import { Component } from '@angular/core';
 import { NavParams } from 'ionic-angular';
 
 import { ConferenceData } from '../../providers/conference-data';
+import {SpeakerDetailPage} from "../speaker-detail/speaker-detail";
 
 @Component({
   selector: 'page-session-detail',

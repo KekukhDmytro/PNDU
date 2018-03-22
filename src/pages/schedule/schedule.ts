@@ -85,14 +85,14 @@ export class SchedulePage {
     if (this.user.hasFavorite(sessionData.name)) {
       // woops, they already favorited it! What shall we do!?
       // prompt them to remove it
-      this.removeFavorite(slidingItem, sessionData, 'Favorite already added');
+      this.removeFavorite(slidingItem, sessionData, 'Ви вже спостерігаєте за цим депутатом');
     } else {
       // remember this session as a user favorite
       this.user.addFavorite(sessionData.name);
 
       // create an alert instance
       let alert = this.alertCtrl.create({
-        title: 'Favorite Added',
+        title: 'Додано в обрані',
         buttons: [{
           text: 'OK',
           handler: () => {
@@ -110,10 +110,10 @@ export class SchedulePage {
   removeFavorite(slidingItem: ItemSliding, sessionData: any, title: string) {
     let alert = this.alertCtrl.create({
       title: title,
-      message: 'Would you like to remove this session from your favorites?',
+      message: 'Чи бажаєте видалити депутата з листа спостереження?',
       buttons: [
         {
-          text: 'Cancel',
+          text: 'Відмінити',
           handler: () => {
             // they clicked the cancel button, do not remove the session
             // close the sliding item and hide the option buttons
@@ -121,7 +121,7 @@ export class SchedulePage {
           }
         },
         {
-          text: 'Remove',
+          text: 'Видалити',
           handler: () => {
             // they want to remove this session from their favorites
             this.user.removeFavorite(sessionData.name);
@@ -159,7 +159,7 @@ export class SchedulePage {
         refresher.complete();
 
         const toast = this.toastCtrl.create({
-          message: 'Sessions have been updated.',
+          message: 'Сторінка оновлена.',
           duration: 3000
         });
         toast.present();

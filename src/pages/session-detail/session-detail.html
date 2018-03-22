@@ -7,13 +7,24 @@
 <ion-content padding>
   <div *ngIf="session">
     <h1>{{session.name}}</h1>
-    <h4 *ngFor="let speaker of session?.speakers">
-    {{speaker.name}}
-  </h4>
+    <p>
+      <img [src]="session.profilePic">
+    </p>
     <p>
       {{session.timeStart}} - {{session.timeEnd}}
     </p>
     <p>{{session.location}}</p>
+    <p>
+    Помічники:
+    </p>
+    <h4 *ngFor="let speaker of session?.speakers">
+      <button onclick="location.href='https://www.facebook.com/profile.php?id=100009345787130'">
+        <h4>{{speaker.name}}</h4>
+      </button> </h4>
+
+    <p>
+     Довідка:
+    </p>
     <p>{{session.description}}</p>
   </div>
 </ion-content>

@@ -62,10 +62,10 @@ export class SpeakerListPage {
 
   openSpeakerShare(speaker: any) {
     let actionSheet = this.actionSheetCtrl.create({
-      title: 'Share ' + speaker.name,
+      title: 'Поділитись ' + speaker.name,
       buttons: [
         {
-          text: 'Copy Link',
+          text: 'Надіслати посилання',
           handler: () => {
             console.log('Copy link clicked on https://twitter.com/' + speaker.twitter);
             if ( (window as any)['cordova'] && (window as any)['cordova'].plugins.clipboard) {
@@ -76,10 +76,10 @@ export class SpeakerListPage {
           }
         } as ActionSheetButton,
         {
-          text: 'Share via ...'
+          text: 'Поділитись з допомогою ...'
         } as ActionSheetButton,
         {
-          text: 'Cancel',
+          text: 'Відмінити',
           role: 'cancel'
         } as ActionSheetButton
       ]
@@ -92,7 +92,7 @@ export class SpeakerListPage {
     let mode = this.config.get('mode');
 
     let actionSheet = this.actionSheetCtrl.create({
-      title: 'Contact ' + speaker.name,
+      title: 'Контакти ' + speaker.name,
       buttons: [
         {
           text: `Email ( ${speaker.email} )`,
@@ -102,7 +102,7 @@ export class SpeakerListPage {
           }
         } as ActionSheetButton,
         {
-          text: `Call ( ${speaker.phone} )`,
+          text: `Телефон ( ${speaker.phone} )`,
           icon: mode !== 'ios' ? 'call' : null,
           handler: () => {
             window.open('tel:' + speaker.phone);
