@@ -3,7 +3,7 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Помічники</ion-title>
+    <ion-title>Помічники </ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -32,8 +32,6 @@
                 <button ion-item *ngFor="let session of speaker.sessions" (click)="goToSessionDetail(session)">
                   <h3>Помічник {{session.name}}</h3>
                 </button>
-
-
               </ion-list>
             </ion-card-content>
 
@@ -47,13 +45,13 @@
               <ion-col col-12 col-lg-auto text-center>
                 <button ion-button clear small color="primary" icon-start (click)="openSpeakerShare(speaker)">
                   <ion-icon name='share-alt'></ion-icon>
-                  Поділитись
+                   Поділитись
                 </button>
               </ion-col>
               <ion-col col-12 col-lg-auto text-center text-lg-right>
                 <button ion-button clear small color="primary" icon-start (click)="openContact(speaker)">
                   <ion-icon name='chatboxes'></ion-icon>
-                  Контакти
+                   Контакти
                 </button>
               </ion-col>
             </ion-row>

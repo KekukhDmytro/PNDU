@@ -76,7 +76,7 @@ export class SpeakerListPage {
           }
         } as ActionSheetButton,
         {
-          text: 'Поділитись з допомогою ...'
+          text: 'Поширити з ...'
         } as ActionSheetButton,
         {
           text: 'Відмінити',
